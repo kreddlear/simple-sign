@@ -1,3 +1,16 @@
 'use strict'
 
-var app = angular.module('appName', ['firebase','ui.bootstrap', 'ngAnimate']);
+angular.module('appName', [
+	'firebase',
+	'ui.bootstrap',
+	'ngAnimate',
+	'ngRoute'
+
+])
+.config(['$routeProvider', function ($routeProvider) {
+	$routeProvider.when('/', {
+		templateUrl: 'index.html',
+		controller: 'simpleSignController'
+	});
+	$routeProvider.otherwise({redirectTo: '/'});
+}]);
