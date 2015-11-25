@@ -1,7 +1,9 @@
 /* simple sign controller */
+angular
+    .module('appName')
+    .controller('simpleSignController', simpleSignController);
 
-angular.module('appName.controllers', [])
-	.controller('simpleSignController',['$scope', '$firebaseArray',function($scope, $firebaseArray) {
+function simpleSignController($scope, $firebaseArray) {
 	
 	var url = 'https://simple-sign.firebaseio.com/signs';
 	var signsRef = new Firebase(url);
@@ -27,5 +29,4 @@ angular.module('appName.controllers', [])
 			} 
 		});
 	};
-	
-}]);
+};
