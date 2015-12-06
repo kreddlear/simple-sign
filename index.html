@@ -1,36 +1,35 @@
-<html ng-app="appName" class="ng-scope" lang="en">
+<html ng-app="simpleSign" class="ng-scope" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>ngBarebones</title>
+    <title>SimpleSign</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="app.css">
 </head>
 
-<body ng-controller="simpleSignController">
-    <div class="container">
-        <div class="page-header">
-            <h1>Header</h1>
-        </div>
-        <p class="lead">Pellentesque ullamcorper pulvinar nunc id mattis. Pellentesque id pellentesque orci, sit amet molestie lacus. Sed eu eros blandit, fermentum orci eget, ornare urna. Integer eleifend ante et tristique laoreet. Nam id enim sit amet enim rutrum consectetur vel ac dui. Quisque nisi sapien, consequat in aliquam venenatis, iaculis a orci.</p>
-        <p>Pellentesque sit amet tincidunt justo.</p>
-        <div class="well text-center"><h2>{{ message }}</h2></div>
-    </div>
-</body>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap.min.js"></script>
-<!-- Firebase -->
+<body>
+    <ng-view></ng-view>
+<!-- Libraries -->
+<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap.min.js"></script>
+<script src="https://code.createjs.com/preloadjs-0.4.1.min.js"></script>
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-<!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
-<script type="text/javascript" src="simpleSignController.js"></script>
-
+<!-- Main App Scripts and Reusable Components -->
+<script type="text/javascript" src="/scripts/app.js"></script>
+<script type="text/javascript" src="/scripts/gradient-service.js"></script>
+<script type="text/javascript" src="/scripts/slide-container-directive.js"></script>
+<!-- Sign Creator Scripts-->
+<script type="text/javascript" src="/sign-creator/sign-creator-controller.js"></script>
+<!-- Display Scripts-->
+<script type="text/javascript" src="/display/display-controller.js"></script>
 </body>
 
 </html>
